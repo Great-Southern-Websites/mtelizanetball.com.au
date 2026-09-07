@@ -3,6 +3,7 @@ title: "Key Dates 2026"
 description: "The 2026 winter season runs every Saturday from March through to September."
 layout: page
 eyebrow: "Season 2026"
+aliases: ["/key-dates-calendar"]
 ---
 
 ## Season overview

@@ -3,6 +3,7 @@ title: "Policies"
 description: "Club policies, by-laws and codes of conduct that keep MENC safe, fair and fun for everyone."
 layout: page
 eyebrow: "About"
+aliases: ["/child-safety"]
 ---
 
 ## Club documents

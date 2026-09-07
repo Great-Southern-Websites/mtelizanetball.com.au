@@ -3,6 +3,7 @@ title: "Training"
 description: "Schedules, venues and what to bring to training at MENC."
 layout: page
 eyebrow: "Players"
+aliases: ["/copy-of-training", "/copy-of-training-1", "/copy-of-training-2"]
 ---
 
 Training is an important part of developing players' netball skills as well as developing cohesion as a team.
