@@ -19,7 +19,7 @@ Our umpires are mentored by experienced officials, ensuring fair treatment for a
 
 Netball Australia publishes the basic rules of the game, which is a great place to start:
 
-[Rules of netball](https://netball.com.au)
+[Basic rules of netball](https://netball.com.au/our-game/basic-rules-of-netball/)
 
 ## Get started
 

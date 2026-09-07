@@ -841,6 +841,15 @@ h2.title::after {
 
 .contact-card a { word-break: break-all; }
 
+/* Sponsor cards on the Sponsors page reuse the contact card, plus a logo. */
+.sponsor-card img {
+  display: block;
+  height: 3.25rem;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
 /* --------------------------------------------------------------------------
    Sponsors — logo band at the foot of the home page. White ground so the
    JPG logos (white boxes) sit invisibly; heights are eyeballed per logo so
