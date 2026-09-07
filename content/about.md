@@ -11,11 +11,9 @@ Mt Eliza Netball Club was established in **1968** as Mt Eliza Basketball Club. A
 
 We're one of the peninsula's largest netball clubs, fielding over **20 teams** across age groups from NetSetGO through to Open division each winter. MENC pioneered boys' participation from the early 2000s and remains committed to inclusive netball in line with Netball Victoria's policies.
 
-As an organisation, MENC is governed by the policies of its umbrella bodies, the FDNA and Netball Victoria.
+The club balances competitive aspirations with grassroots values, welcoming representative-track players and recreational participants alike, all looking for enjoyment and community connection.
 
-MENC is traditionally strongly represented in the FDNA winter finals. In keeping with our mission statement, we aim to cater for everyone who wishes to play netball, from those chasing a place on a representative team to those who simply want competitive, active fun with friends. MENC is a grassroots club focused on fostering a love of netball together with a strong sense of community and participation.
-
-## 2026 committee members
+## 2025 leadership team
 
 | Role | Name |
 | --- | --- |

@@ -10,7 +10,6 @@ eyebrow: "Season 2026"
 - **Training** begins in **February** at the Howard Parker Reserve courts.
 - **Saturday games** commence **14 March 2026** at Jubilee Park.
 - The season runs **every Saturday from March through September**, excluding some long weekends and school holidays.
-- Age groups train together to begin with. This helps us with team allocation and gives every player a positive start to the season. Further information will be sent out closer to the time.
 
 ## Age groups for 2026
 
@@ -37,4 +36,4 @@ eyebrow: "Season 2026"
 
 ## Got questions?
 
-Reach out to Mel, our Registrations Coordinator: [netballrego.menc@gmail.com](mailto:netballrego.menc@gmail.com)
+Email our Registrations Coordinator: [netballrego.menc@gmail.com](mailto:netballrego.menc@gmail.com)
