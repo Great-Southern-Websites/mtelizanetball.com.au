@@ -9,7 +9,7 @@ We're all volunteers at MENC. Team managers, committee members and helpers on ga
 
 ## Roles we need filled
 
-[Add the volunteer roles you need filled here, for example team managers, committee positions and game day helpers, with a line on what each involves.]
+Information coming soon
 
 ## Put your hand up
 
