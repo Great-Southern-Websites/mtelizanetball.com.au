@@ -19,7 +19,7 @@ eyebrow: "Proudly supported by"
     <p><a href="https://www.golfclearanceoutlet.com.au/">Visit The Golf Clearance Outlet</a></p>
   </li>
   <li class="sm">
-    <img src="{=site.image('sponsors/steadfast-logistics.svg')}" alt="Steadfast Logistics" loading="lazy" width="320" height="96">
+    <img src="{=site.image('sponsors/steadfast-logistics.png')}" alt="Steadfast Logistics" loading="lazy" width="800" height="396">
     <h3>Steadfast Logistics</h3>
     <p>Steadfast Logistics is an Australian, family-run freight management business based in Dandenong South, offering local transport, freight and warehousing services.</p>
     <p><a href="https://steadfastlogistics.com.au/">Visit Steadfast Logistics</a></p>
