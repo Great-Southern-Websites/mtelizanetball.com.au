@@ -2,8 +2,7 @@
 title: "Coaching"
 description: "Like our players, our coaches are the heart and soul of our netball community."
 layout: page
-eyebrow: "Come coach with us"
-aliases: ["/volunteer-roles"]
+eyebrow: "Get involved"
 ---
 
 Every season we field over 20 teams, and every one of them needs a coach. Filling the full coaching roster is always a challenge, and we'd love your help.

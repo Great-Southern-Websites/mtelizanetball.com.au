@@ -2,7 +2,7 @@
 title: "Season Information"
 description: "Registration, fixtures and key dates for the winter season."
 layout: page
-eyebrow: "Players"
+eyebrow: "Player Info"
 ---
 
 ## Registration

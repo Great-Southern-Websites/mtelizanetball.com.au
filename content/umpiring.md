@@ -2,7 +2,7 @@
 title: "Umpiring"
 description: "New and experienced umpires are trained, mentored and supported at MENC."
 layout: page
-eyebrow: "Get official"
+eyebrow: "Get involved"
 ---
 
 Umpiring is a brilliant way to stay involved in netball, earn some pocket money, and build skills that last well beyond the court:

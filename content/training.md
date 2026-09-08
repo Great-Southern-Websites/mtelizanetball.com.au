@@ -2,7 +2,7 @@
 title: "Training"
 description: "Schedules, venues and what to bring to training at MENC."
 layout: page
-eyebrow: "Players"
+eyebrow: "Player Info"
 aliases: ["/copy-of-training", "/copy-of-training-1", "/copy-of-training-2"]
 ---
 

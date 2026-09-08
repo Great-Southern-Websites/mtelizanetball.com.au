@@ -1,6 +1,11 @@
 {@io.quarkiverse.roq.frontmatter.runtime.model.Site site}
 <section class="hero">
-  <div class="photo" style="background-image: url('{=site.image('hero-team.jpg')}')"></div>
+  <div class="slides" aria-hidden="true">
+    <div class="photo" style="background-image: url('{=site.image('hero-team.jpg')}')"></div>
+    <div class="photo" style="background-image: url('{=site.image('hero-team-alt.jpg')}')"></div>
+    <div class="photo" style="background-image: url('{=site.image('hero2.jpg')}')"></div>
+    <div class="photo" style="background-image: url('{=site.image('hero1.jpg')}')"></div>
+  </div>
   <div class="scrim"></div>
   <div class="container">
     <div class="content">
@@ -10,6 +15,7 @@
       <div class="actions">
         <a class="btn btn-gold" href="https://registration.netballconnect.com/userRegistration?organisationId=799dc8d1-75f6-465b-98e5-0dffe8ced073&amp;competitionId=afa1cda0-bfde-40cf-9f12-b7c144693684">Register for Spring 2026</a>
         <a class="btn btn-outline" href="{=site.url('season')}">Season info</a>
+        <a class="btn btn-outline" href="{=site.url('key-dates')}">Key dates</a>
       </div>
     </div>
   </div>

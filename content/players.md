@@ -1,27 +1,45 @@
 ---
-title: "Players"
-description: "Everything you need to take the court with MENC: game times, uniforms and training."
+title: "Player Info"
+description: "Everything you need to take the court with MENC: fixtures, season information, key dates, training, uniform and where we need players."
 layout: page
 eyebrow: "Take the court"
 ---
 
-## Game times
+## Fixtures
 
-FDNA fixtures, game times and courts for the winter season are published on the association's fixture portal.
+Game times, courts, results and ladders for every MENC team, refreshed each morning from NetballConnect.
 
-[Find your game time](https://websites.sportstg.com/assoc_page.cgi?c=0-44-0-0-0&a=COMPS&seasonID=6018660). Check on Friday evening for final court allocations.
+[Fixtures and results]({=site.url('fixtures')})
 
-## Uniforms
+## Season information
 
-Find out what you need to take the court, and how to order new supplies.
+Registration, fixtures and key dates for the season.
 
-[Uniform requirements and ordering]({=site.url('uniforms')})
+[Season information]({=site.url('season')})
+
+## Key dates
+
+Training start, first games and age groups for the season.
+
+[Key dates]({=site.url('key-dates')})
 
 ## Training
 
 Training is where teams are built. Check your age group's schedule and what to bring.
 
 [Training schedule and resources]({=site.url('training')})
+
+## Uniform
+
+Find out what you need to take the court, and how to order new supplies.
+
+[Uniform requirements and ordering]({=site.url('uniforms')})
+
+## Players wanted
+
+See which teams and age groups have room for new players.
+
+[Players wanted]({=site.url('players-wanted')})
 
 ## Registration
 

@@ -1,8 +1,8 @@
 ---
-title: "Uniforms"
+title: "Uniform"
 description: "What you need to take the court, and how to order club gear."
 layout: page
-eyebrow: "Players"
+eyebrow: "Player Info"
 ---
 
 ## Compulsory uniform

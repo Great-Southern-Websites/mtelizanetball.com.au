@@ -11,26 +11,35 @@
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
         <li><a href="{=site.url}">Home</a></li>
+        <li><a href="{=site.url('about')}">About Us</a></li>
         <li class="open">
-          <a href="{=site.url('players')}">Players</a>
+          <a href="{=site.url('players')}">Player Info</a>
           <ul>
+            <li><a href="{=site.url('fixtures')}">Fixtures</a></li>
+            <li><a href="{=site.url('season')}">Season Information</a></li>
+            <li><a href="{=site.url('key-dates')}">Key Dates</a></li>
             <li><a href="{=site.url('training')}">Training</a></li>
-            <li><a href="{=site.url('season')}">Season Info</a></li>
-            <li><a href="{=site.url('uniforms')}">Uniforms</a></li>
+            <li><a href="{=site.url('uniforms')}">Uniform</a></li>
+            <li><a href="{=site.url('players-wanted')}">Players Wanted</a></li>
           </ul>
         </li>
-        <li><a href="{=site.url('fixtures')}">Fixtures</a></li>
-        <li><a href="{=site.url('coaching')}">Coaching</a></li>
-        <li><a href="{=site.url('umpiring')}">Umpiring</a></li>
-        <li><a href="{=site.url('key-dates')}">Key Dates</a></li>
-        <li><a href="{=site.url('news')}">News</a></li>
         <li class="open">
-          <a href="{=site.url('about')}">About</a>
+          <a href="{=site.url('resources')}">Resources</a>
           <ul>
             <li><a href="{=site.url('policies')}">Policies</a></li>
-            <li><a href="{=site.url('contact')}">Contact</a></li>
+            <li><a href="{=site.url('child-safety')}">Child Safety</a></li>
           </ul>
         </li>
+        <li class="open">
+          <a href="{=site.url('get-involved')}">Get Involved</a>
+          <ul>
+            <li><a href="{=site.url('coaching')}">Coaching</a></li>
+            <li><a href="{=site.url('umpiring')}">Umpiring</a></li>
+            <li><a href="{=site.url('volunteer-roles')}">Volunteer Roles</a></li>
+          </ul>
+        </li>
+        <li><a href="{=site.url('sponsors')}">Sponsors</a></li>
+        <li><a href="{=site.url('contact')}">Contact Us</a></li>
         <li><a class="btn-register" href="https://registration.netballconnect.com/userRegistration?organisationId=799dc8d1-75f6-465b-98e5-0dffe8ced073&amp;competitionId=afa1cda0-bfde-40cf-9f12-b7c144693684">Register Spring 2026</a></li>
       </ul>
     </nav>

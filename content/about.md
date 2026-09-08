@@ -1,5 +1,5 @@
 ---
-title: "About MENC"
+title: "About Us"
 description: "Mt Eliza Netball Club enables all members to strive to achieve their best through fostering a love of netball in a safe, fun, family-friendly and supportive community, inclusive of all ages and abilities."
 layout: page
 eyebrow: "Our club"
@@ -13,7 +13,7 @@ We're one of the peninsula's largest netball clubs, fielding over **20 teams** a
 
 The club balances competitive aspirations with grassroots values, welcoming representative-track players and recreational participants alike, all looking for enjoyment and community connection.
 
-## 2025 leadership team
+## Committee members
 
 | Role | Name |
 | --- | --- |
@@ -28,7 +28,7 @@ The club balances competitive aspirations with grassroots values, welcoming repr
 | Property Coordinator | Tess Collyer |
 | Fundraising / Sponsorship | Linda Rintoul |
 | Uniform Coordinator | Charmaine Kruger |
-| Website / Social Media | &mdash; |
+| Website / Social Media | |
 
 ## Life members
 
