@@ -25,6 +25,7 @@ eyebrow: "Proudly supported by"
   <li>
     <img src="{=site.image('sponsors/robinson-voss-partners.jpg')}" alt="Robinson Voss Partners" loading="lazy" width="250" height="110">
     <h3>Robinson Voss Partners</h3>
-    <p>[Add a line about Robinson Voss Partners and a link to their website here]</p>
+    <p>Robinson Voss Partners is a Mount Eliza advisory firm offering business advice, tax strategy, asset protection and super solutions to business owners.</p>
+    <p><a href="https://rvpartners.com.au/">Visit Robinson Voss Partners</a></p>
   </li>
 </ul>
