@@ -12,12 +12,14 @@ eyebrow: "Proudly supported by"
     <p>Community Bank Mt Eliza not only gives you access to award-winning financial products and services, we're also committed to returning profits to our local communities.</p>
     <p><a href="https://www.bendigobank.com.au/branch/vic/community-bank-mt-eliza/">Visit Community Bank Mt Eliza</a></p>
   </li>
-  <li>
+  <li class="sm">
+    <img src="{=site.image('sponsors/golf-clearance-outlet.svg')}" alt="The Golf Clearance Outlet" loading="lazy" width="320" height="96">
     <h3>The Golf Clearance Outlet</h3>
     <p>The Golf Clearance Outlet is a retail golf shop selling golf clubs, balls, bags, apparel and accessories from brands including TaylorMade, FootJoy and Titleist, online and in stores across Australia.</p>
     <p><a href="https://www.golfclearanceoutlet.com.au/">Visit The Golf Clearance Outlet</a></p>
   </li>
-  <li>
+  <li class="sm">
+    <img src="{=site.image('sponsors/steadfast-logistics.svg')}" alt="Steadfast Logistics" loading="lazy" width="320" height="96">
     <h3>Steadfast Logistics</h3>
     <p>Steadfast Logistics is an Australian, family-run freight management business based in Dandenong South, offering local transport, freight and warehousing services.</p>
     <p><a href="https://steadfastlogistics.com.au/">Visit Steadfast Logistics</a></p>

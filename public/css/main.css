@@ -919,6 +919,9 @@ h2.title::after {
   margin: 0 0 1rem;
 }
 
+/* Smaller logo for sponsors whose mark should sit lighter in the card */
+.sponsor-list .sm img { height: 3rem; }
+
 .prose .sponsor-list h3 { margin: 0 0 0.35rem; font-size: 1.3rem; }
 .sponsor-list p:last-child { margin: 0; color: var(--muted); }
 
