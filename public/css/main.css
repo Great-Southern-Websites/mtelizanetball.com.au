@@ -300,6 +300,32 @@ a:hover { color: var(--red-dark); }
   overflow: hidden;
 }
 
+/* Rotating background photos. Two slides cross-fade on a 16s loop; with
+   prefers-reduced-motion the global rule stops the animation and the first
+   slide stays on screen. */
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero .hero-bg .slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: hero-rotate 16s ease-in-out infinite;
+}
+
+.hero .hero-bg .slide:nth-child(1) { opacity: 1; }
+.hero .hero-bg .slide:nth-child(2) { animation-delay: 8s; }
+
+@keyframes hero-rotate {
+  0% { opacity: 0; }
+  10%, 45% { opacity: 1; }
+  55%, 100% { opacity: 0; }
+}
+
 .hero .scrim {
   position: absolute;
   inset: 0;
