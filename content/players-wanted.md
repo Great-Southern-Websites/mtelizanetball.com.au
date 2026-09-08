@@ -9,7 +9,7 @@ Mt Eliza Netball Club is inviting new players to join us. From NetSetGO to Open,
 
 ## Where we need players
 
-[Add the teams or age groups that need players here, for example the age group, the day they train and how many players are needed.]
+Information coming soon
 
 ## Spring season
 
