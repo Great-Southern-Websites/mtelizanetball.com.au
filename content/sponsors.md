@@ -14,7 +14,8 @@ eyebrow: "Proudly supported by"
   </li>
   <li>
     <h3>The Golf Clearance Outlet</h3>
-    <p>[Add The Golf Clearance Outlet logo, a line about them and a link to their website here]</p>
+    <p>The Golf Clearance Outlet is a retail golf shop selling golf clubs, balls, bags, apparel and accessories from brands including TaylorMade, FootJoy and Titleist, online and in stores across Australia.</p>
+    <p><a href="https://www.golfclearanceoutlet.com.au/">Visit The Golf Clearance Outlet</a></p>
   </li>
   <li>
     <h3>Steadfast Logistics</h3>
