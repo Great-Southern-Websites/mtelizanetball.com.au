@@ -300,43 +300,6 @@ a:hover { color: var(--red-dark); }
   overflow: hidden;
 }
 
-.hero .slides { position: absolute; inset: 0; }
-
-/* Rotating background photos: a CSS-only crossfade, one slide every 6s.
-   Slides 2 to 4 start hidden and fade in on their delay; slide 1 starts
-   visible so nothing flashes at load. With reduced motion the animation
-   is removed and slide 1 simply stays put. */
-.hero .photo {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center 30%;
-  filter: saturate(1.05);
-  opacity: 0;
-  animation: hero-fade 24s linear infinite;
-}
-
-.hero .photo:nth-child(1) { opacity: 1; animation-name: hero-fade-first; }
-.hero .photo:nth-child(2) { animation-delay: 6s; }
-.hero .photo:nth-child(3) { animation-delay: 12s; }
-.hero .photo:nth-child(4) { animation-delay: 18s; }
-
-@keyframes hero-fade {
-  0% { opacity: 0; }
-  4.2% { opacity: 1; }
-  25% { opacity: 1; }
-  29.2% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-@keyframes hero-fade-first {
-  0% { opacity: 1; }
-  25% { opacity: 1; }
-  29.2% { opacity: 0; }
-  95.8% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
 .hero .scrim {
   position: absolute;
   inset: 0;
