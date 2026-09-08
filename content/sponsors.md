@@ -9,7 +9,8 @@ eyebrow: "Proudly supported by"
   <li>
     <img src="{=site.image('sponsors/community-bank-mt-eliza.png')}" alt="Bendigo Bank Mount Eliza" loading="lazy" width="1182" height="532">
     <h3>Bendigo Bank Mount Eliza</h3>
-    <p>[Add a line about Bendigo Bank Mount Eliza and a link to their website here]</p>
+    <p>Community Bank Mt Eliza not only gives you access to award-winning financial products and services, we're also committed to returning profits to our local communities.</p>
+    <p><a href="https://www.bendigobank.com.au/branch/vic/community-bank-mt-eliza/">Visit Community Bank Mt Eliza</a></p>
   </li>
   <li>
     <h3>The Golf Clearance Outlet</h3>
