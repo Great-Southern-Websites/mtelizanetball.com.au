@@ -19,7 +19,8 @@ eyebrow: "Proudly supported by"
   </li>
   <li>
     <h3>Steadfast Logistics</h3>
-    <p>[Add the Steadfast Logistics logo, a line about them and a link to their website here]</p>
+    <p>Steadfast Logistics is an Australian, family-run freight management business based in Dandenong South, offering local transport, freight and warehousing services.</p>
+    <p><a href="https://steadfastlogistics.com.au/">Visit Steadfast Logistics</a></p>
   </li>
   <li>
     <img src="{=site.image('sponsors/robinson-voss-partners.jpg')}" alt="Robinson Voss Partners" loading="lazy" width="250" height="110">
