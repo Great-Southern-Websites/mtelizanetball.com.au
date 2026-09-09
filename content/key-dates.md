@@ -1,16 +1,27 @@
 ---
 title: "Key Dates 2026"
-description: "The 2026 winter season runs every Saturday from March through to September."
+description: "The 2026 Spring season runs every Saturday from October through to December."
 layout: page
-eyebrow: "Season 2026"
+eyebrow: "Spring Season 2026"
 aliases: ["/key-dates-calendar"]
 ---
 
 ## Season overview
 
-- **Training** begins in **February** at the Howard Parker Reserve courts.
-- **Saturday games** commence **14 March 2026** at Jubilee Park.
-- The season runs **every Saturday from March through September**, excluding some long weekends and school holidays.
+Spring Saturday season dates 2026.
+
+| Date | Round | Note |
+| --- | --- | --- |
+| 10 October 2026 | Round 1 | Season commences |
+| 17 October 2026 | Round 2 | Victoria Police Community Engagement Day |
+| 24 October 2026 | Round 3 | |
+| 31 October 2026 | Round 4 | |
+| 7 November 2026 | Round 5 | |
+| 14 November 2026 | Round 6 | |
+| 21 November 2026 | Round 7 | |
+| 28 November 2026 | Round 8 | Wear Orange (Violence against Women) |
+| 5 December 2026 | Round 9 | |
+| 12 December 2026 | Round 10 | Finals |
 
 ## Age groups for 2026
 
