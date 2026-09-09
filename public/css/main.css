@@ -860,9 +860,9 @@ h2.title::after {
 .contact-card a { word-break: break-all; }
 
 /* --------------------------------------------------------------------------
-   Sponsors — logo band at the foot of the home page. White ground so the
-   JPG logos (white boxes) sit invisibly; heights are eyeballed per logo so
-   wide wordmarks and stacked marks carry the same visual weight.
+   Sponsors — logo band at the foot of the home page. Every logo sits in a
+   tile of the same size and is scaled to fit, so wide wordmarks, square
+   marks and stacked marks carry the same visual weight and spacing.
    -------------------------------------------------------------------------- */
 .sponsors {
   background: var(--white);
@@ -873,32 +873,34 @@ h2.title::after {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
-.sponsor-logos li { flex: none; }
+.sponsor-logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 5 / 3;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 
 .sponsor-logos img {
   display: block;
-  height: 3.25rem;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.sponsor-logos .lg img { height: 4.5rem; }
-
-/* Sponsors we have no logo for yet show as a wordmark in the band */
-.sponsor-logos .name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.6rem;
-  line-height: 1.1;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--black);
+/* White-on-transparent logos sit on the club black */
+.sponsor-logos .dark {
+  background: var(--black);
+  border-color: var(--black);
 }
 
 .sponsor-more {
@@ -912,10 +914,8 @@ h2.title::after {
 .sponsor-more a::after { content: " \2192"; color: var(--gold); }
 
 @media (max-width: 50rem) {
-  .sponsor-logos { gap: 1.5rem 2.25rem; }
-  .sponsor-logos img { height: 2.5rem; }
-  .sponsor-logos .lg img { height: 3.5rem; }
-  .sponsor-logos .name { font-size: 1.3rem; }
+  .sponsor-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .sponsor-logos li { padding: 1rem; }
 }
 
 /* Sponsors page: one card per sponsor */
@@ -948,6 +948,14 @@ h2.title::after {
 
 /* Smaller logo for sponsors whose mark should sit lighter in the card */
 .sponsor-list .sm img { height: 3rem; }
+
+/* White-on-transparent logos sit on the club black */
+.sponsor-list .dark img {
+  box-sizing: content-box;
+  padding: 0.6rem 0.9rem;
+  background: var(--black);
+  border-radius: 6px;
+}
 
 .prose .sponsor-list h3 { margin: 0 0 0.35rem; font-size: 1.3rem; }
 .sponsor-list p:last-child { margin: 0; color: var(--muted); }
