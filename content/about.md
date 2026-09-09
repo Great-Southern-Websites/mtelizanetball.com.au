@@ -22,13 +22,13 @@ The club balances competitive aspirations with grassroots values, welcoming repr
 | Secretary | Linda Rintoul |
 | Treasurer | Danielle Tonks |
 | Coach Coordinator | Samantha Monaghan |
-| Umpire Coordinator | Amelia Milvain |
+| Umpire Coordinator | Volunteer needed |
 | Registrations Coordinator | Melissa Colosimo |
 | Child Safe Coordinator | Amelia Milvain |
 | Property Coordinator | Tess Collyer |
 | Fundraising / Sponsorship | Linda Rintoul |
 | Uniform Coordinator | Charmaine Kruger |
-| Website / Social Media | |
+| Website / Social Media | Charmaine Kruger |
 
 ## Life members
 
