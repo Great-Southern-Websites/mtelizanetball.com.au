@@ -13,7 +13,7 @@ eyebrow: "Proudly supported by"
     <p><a href="https://www.bendigobank.com.au/branch/vic/community-bank-mt-eliza/">Visit Community Bank Mt Eliza</a></p>
   </li>
   <li>
-    <img src="{=site.url('images/uploads/images-2.png')}" alt="The Golf Clearance Outlet" loading="lazy" width="554" height="554">
+    <img src="{=site.url('images/uploads/images-3.png')}" alt="The Golf Clearance Outlet" loading="lazy" width="392" height="98">
     <h3>The Golf Clearance Outlet</h3>
     <p>The Golf Clearance Outlet is a retail golf shop selling golf clubs, balls, bags, apparel and accessories from brands including TaylorMade, FootJoy and Titleist, online and in stores across Australia.</p>
     <p><a href="https://www.golfclearanceoutlet.com.au/">Visit The Golf Clearance Outlet</a></p>
