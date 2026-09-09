@@ -16,11 +16,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{=site.url('css/main.css')}">
+  <script>{|
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || t === 'light') { document.documentElement.setAttribute('data-theme', t); }
+      } catch (e) {}
+    })();
+  |}</script>
   {#insert head /}
 </head>
 <body>
   {#include partials/header /}
   {#insert /}
   {#include partials/footer /}
+  <script>{|
+    (function () {
+      var button = document.querySelector('.theme-toggle');
+      if (!button) { return; }
+      var root = document.documentElement;
+      function current() {
+        var t = root.getAttribute('data-theme');
+        if (t) { return t; }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      function update() { button.setAttribute('aria-pressed', current() === 'dark' ? 'true' : 'false'); }
+      button.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        update();
+      });
+      update();
+    })();
+  |}</script>
 </body>
 </html>

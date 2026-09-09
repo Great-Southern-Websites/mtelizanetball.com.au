@@ -25,6 +25,63 @@
   --container: 72rem;
   --radius: 10px;
   --shadow: 0 10px 30px rgba(27, 21, 25, 0.10);
+
+  /* Surfaces and text, so the dark theme can swap them in one place.
+     Brand colours above stay the same in both themes. */
+  --bg: var(--chalk);
+  --surface: var(--white);
+  --text: var(--ink);
+  --paper: #FAF2E5;
+  --highlight: #FFF6DF;
+  --strip-edge: transparent;
+  --paper-btn-hover-bg: var(--black);
+  --paper-btn-hover-text: var(--gold-soft);
+  --logo-pad: 0;
+  color-scheme: light;
+}
+
+/* --------------------------------------------------------------------------
+   Dark theme. Chosen with the header button (stored in localStorage and set
+   as data-theme on <html>), or follows the system setting when the visitor
+   has not picked one. Black header, footer and bands stay as they are; the
+   page background, cards and text swap to dark surfaces and light ink.
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"] {
+  --bg: #151215;
+  --surface: #221D21;
+  --text: #F2ECE6;
+  --line: #3A3238;
+  --muted: #B3A9A3;
+  --red-ink: #FF6B6E;
+  --red-dark: #FF9598;
+  --paper: #2A2226;
+  --highlight: #3A3020;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --strip-edge: var(--line);
+  --paper-btn-hover-bg: var(--gold);
+  --paper-btn-hover-text: var(--black);
+  --logo-pad: 0.5rem 0.75rem;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151215;
+    --surface: #221D21;
+    --text: #F2ECE6;
+    --line: #3A3238;
+    --muted: #B3A9A3;
+    --red-ink: #FF6B6E;
+    --red-dark: #FF9598;
+    --paper: #2A2226;
+    --highlight: #3A3020;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    --strip-edge: var(--line);
+    --paper-btn-hover-bg: var(--gold);
+    --paper-btn-hover-text: var(--black);
+    --logo-pad: 0.5rem 0.75rem;
+    color-scheme: dark;
+  }
 }
 
 * { box-sizing: border-box; }
@@ -40,8 +97,8 @@ body {
   font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.65;
-  color: var(--ink);
-  background: var(--chalk);
+  color: var(--text);
+  background: var(--bg);
 }
 
 img { max-width: 100%; display: block; }
@@ -124,6 +181,36 @@ a:hover { color: var(--red-dark); }
   margin-top: 0.25rem;
 }
 
+/* Theme button: sits at the right of the bar on desktop and beside the
+   burger on phones. Shows a moon in the light theme and a sun in the dark. */
+.theme-toggle {
+  flex: none;
+  order: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.theme-toggle:hover { border-color: var(--gold); color: var(--gold-soft); }
+.theme-toggle svg { display: block; width: 20px; height: 20px; }
+.theme-toggle .sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+}
+
 /* Navigation */
 .nav-toggle-input { position: absolute; opacity: 0; }
 
@@ -168,7 +255,7 @@ a:hover { color: var(--red-dark); }
 /* Nav labels must never break across two lines: a wrapped label makes the
    whole bar look ragged, because the taller item drags the row height with
    it. Sizes below are set so the full row still fits at the narrowest
-   desktop width (60rem) before the burger menu takes over. */
+   desktop width (67rem) before the burger menu takes over. */
 .site-nav > ul > li { flex: none; }
 
 .site-nav a {
@@ -235,9 +322,10 @@ a:hover { color: var(--red-dark); }
 }
 
 /* Narrow desktop. Between the burger breakpoint and the width where the
-   full-size row fits (about 1070px) there is not enough room for the whole
-   nav, so step the header down a notch rather than let anything wrap. */
-@media (min-width: 60.0625rem) and (max-width: 68rem) {
+   full-size row (nav plus theme button) fits beside the centred container
+   (about 1400px) there is not enough room for the whole nav, so step the
+   header down a notch rather than let anything wrap. */
+@media (min-width: 67.0625rem) and (max-width: 88rem) {
   .site-header .bar { gap: 0.85rem; }
 
   .brand .mark { height: 3.2rem; }
@@ -254,10 +342,14 @@ a:hover { color: var(--red-dark); }
     padding: 0.5rem 0.8rem !important;
     margin-left: 0.25rem;
   }
+
+  .theme-toggle { width: 40px; margin-left: -0.25rem; }
 }
 
-@media (max-width: 60rem) {
+@media (max-width: 67rem) {
   .nav-toggle { display: block; }
+  .theme-toggle { order: 0; margin-left: auto; }
+  .nav-toggle { margin-left: 0; }
 
   /* The burger menu leaves the brand alone on the top row, so let it shrink
      and wrap again on small phones rather than push the bar sideways. */
@@ -407,7 +499,7 @@ a:hover { color: var(--red-dark); }
    -------------------------------------------------------------------------- */
 .spring {
   position: relative;
-  background: #FAF2E5;
+  background: var(--paper);
   overflow: hidden;
   padding: 5rem 0;
 }
@@ -446,7 +538,7 @@ a:hover { color: var(--red-dark); }
   font-size: 1.4rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--text);
   transform: rotate(-2deg);
   margin: 0;
 }
@@ -464,7 +556,7 @@ a:hover { color: var(--red-dark); }
 
 .spring-word .c1 { color: var(--red); }
 .spring-word .c2 { color: var(--gold); }
-.spring-word .c3 { color: var(--black); }
+.spring-word .c3 { color: var(--text); }
 
 .visually-hidden {
   position: absolute;
@@ -527,13 +619,13 @@ a:hover { color: var(--red-dark); }
 
 .spring .actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
-.btn-paper { border-color: var(--black); color: var(--black); }
-.btn-paper:hover { background: var(--black); color: var(--gold-soft); }
+.btn-paper { border-color: var(--text); color: var(--text); }
+.btn-paper:hover { background: var(--paper-btn-hover-bg); color: var(--paper-btn-hover-text); }
 
 .spring-welcome {
   margin: 1.9rem 0 0;
   font-size: clamp(1.7rem, 3.5vw, 2.1rem);
-  color: var(--ink);
+  color: var(--text);
   max-width: 27rem;
 }
 
@@ -597,7 +689,7 @@ h2.title::after {
 }
 
 .card {
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -667,6 +759,8 @@ h2.title::after {
 .strip {
   background: var(--black);
   color: var(--white);
+  border-top: 1px solid var(--strip-edge);
+  border-bottom: 1px solid var(--strip-edge);
 }
 
 .strip h2.title { color: var(--white); }
@@ -761,7 +855,7 @@ h2.title::after {
   margin: 1.5rem 0;
   padding: 1rem 1.5rem;
   border-left: 4px solid var(--gold);
-  background: var(--white);
+  background: var(--surface);
   border-radius: 0 var(--radius) var(--radius) 0;
   font-style: italic;
 }
@@ -770,7 +864,7 @@ h2.title::after {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -801,7 +895,7 @@ h2.title::after {
 .news-list { display: grid; gap: 1.5rem; max-width: 46rem; }
 
 .news-item {
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 1.75rem;
   box-shadow: var(--shadow);
@@ -818,7 +912,7 @@ h2.title::after {
 }
 
 .news-item h3 { margin: 0.35rem 0 0.5rem; font-size: 1.35rem; }
-.news-item h3 a { text-decoration: none; color: var(--ink); }
+.news-item h3 a { text-decoration: none; color: var(--text); }
 .news-item h3 a:hover { color: var(--red-ink); }
 
 .article-meta {
@@ -842,7 +936,7 @@ h2.title::after {
 }
 
 .contact-card {
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);
@@ -865,7 +959,7 @@ h2.title::after {
    marks and stacked marks carry the same visual weight and spacing.
    -------------------------------------------------------------------------- */
 .sponsors {
-  background: var(--white);
+  background: var(--surface);
   border-top: 1px solid var(--line);
 }
 
@@ -931,7 +1025,7 @@ h2.title::after {
 .prose .sponsor-list li { margin: 0; }
 
 .sponsor-list li {
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: var(--shadow);
@@ -949,6 +1043,14 @@ h2.title::after {
 /* Smaller logo for sponsors whose mark should sit lighter in the card */
 .sponsor-list .sm img { height: 3rem; }
 
+/* Dark-on-transparent logos keep a white backing in the dark theme */
+.sponsor-list li:not(.dark) img {
+  box-sizing: content-box;
+  padding: var(--logo-pad);
+  background: var(--white);
+  border-radius: 6px;
+}
+
 /* White-on-transparent logos sit on the club black */
 .sponsor-list .dark img {
   box-sizing: content-box;
@@ -962,7 +1064,7 @@ h2.title::after {
 
 /* Policies page: one drop down per group of policies */
 .policy-group {
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border-left: 4px solid var(--gold);
@@ -1049,7 +1151,7 @@ h2.title::after {
    -------------------------------------------------------------------------- */
 .fixtures .section.tight { padding: 2.75rem 0; }
 .fixtures .section-head { margin-bottom: 1.5rem; }
-.fx-alt { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.fx-alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
 .fx-head {
   display: flex;
@@ -1081,7 +1183,7 @@ h2.title::after {
 .fx-table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -1106,7 +1208,7 @@ h2.title::after {
 }
 .fx-table tr:last-child td { border-bottom: none; }
 .fx-table td small { display: block; color: var(--muted); font-size: 0.8rem; margin-top: 0.1rem; }
-.fx-table .fx-team a { font-weight: 600; text-decoration: none; color: var(--ink); }
+.fx-table .fx-team a { font-weight: 600; text-decoration: none; color: var(--text); }
 .fx-table .fx-team a:hover { color: var(--red-ink); }
 .fx-time, .fx-when, .fx-table .fx-team { white-space: nowrap; }
 .fx-upcoming td, .fx-season td { white-space: nowrap; }
@@ -1132,7 +1234,7 @@ h2.title::after {
 
 .fx-ladder td, .fx-ladder th { text-align: center; padding-inline: 0.55rem; }
 .fx-ladder td.fx-team, .fx-ladder th:nth-child(2) { text-align: left; }
-.fx-ladder tr.us td { background: #FFF6DF; font-weight: 600; }
+.fx-ladder tr.us td { background: var(--highlight); font-weight: 600; }
 .fx-ladder tr.us td:first-child { box-shadow: inset 4px 0 0 var(--gold); }
 
 /* Outcome pills: W gold, L ink, D outline, played/bye muted */
@@ -1151,7 +1253,7 @@ h2.title::after {
 }
 .res.W { background: var(--gold); color: var(--black); }
 .res.L { background: var(--black); color: var(--white); }
-.res.D { border-color: var(--black); color: var(--black); background: var(--white); }
+.res.D { border-color: var(--text); color: var(--text); background: var(--surface); }
 .res.P, .res.BYE { background: var(--line); color: var(--muted); }
 
 .team-grid {
@@ -1161,16 +1263,16 @@ h2.title::after {
 }
 .team-card {
   display: block;
-  background: var(--white);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 1.25rem 1.35rem;
   box-shadow: var(--shadow);
   border-top: 4px solid var(--red);
-  color: var(--ink);
+  color: var(--text);
   text-decoration: none;
   transition: transform 0.15s ease;
 }
-.team-card:hover { transform: translateY(-3px); color: var(--ink); }
+.team-card:hover { transform: translateY(-3px); color: var(--text); }
 .team-card:hover h3 { color: var(--red-ink); }
 .team-card .kicker {
   font-family: var(--font-display);
@@ -1190,7 +1292,7 @@ h2.title::after {
   line-height: 1;
 }
 .team-card p { margin: 0.3rem 0; font-size: 0.93rem; }
-.team-stat strong { color: var(--ink); }
+.team-stat strong { color: var(--text); }
 .team-next { color: var(--muted); font-size: 0.88rem; }
 .team-record { display: flex; gap: 0.35rem; margin: 0.5rem 0 !important; }
 .team-record.lg { margin: 0 0 1.25rem !important; }
