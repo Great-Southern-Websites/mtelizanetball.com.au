@@ -15,7 +15,7 @@ eyebrow: "Player Info"
 
 ## Optional club gear
 
-- Hooded windcheaters, with optional name embroidery.
+- Hoodies, with optional name embroidery.
 - Training tops.
 - Club socks.
 
@@ -40,76 +40,22 @@ eyebrow: "Player Info"
   </li>
 </ul>
 
-## Prices
-
-| Item | Price |
-| --- | --- |
-| Aline Dress (Size 6-14) / (Sizes XXS-3XL) | $55 |
-| Hoodie (inc. name on back / (Sizes 4-16) / (Sizes XS-3XL) | $65 |
-| Socks (13-3, 2-8 or 8-11) | $15 |
-| Training Top | $25 |
-| Hat | $15 |
-| Beanie | $15 |
-
 ## Sizing guide
 
-To work out your size accurately:
+Measure a garment that already fits you, then check it against the club size charts.
 
-1. Choose a garment that already fits you well. If you are ordering a hoodie, measure a hoodie, not a jacket.
-2. Lay the garment flat on a surface, with no wrinkles in it.
-3. Measure across the chest, from underarm to underarm. This is the half chest measurement.
-4. Compare your measurement with the tables below and pick the closest match.
+<p><a class="btn btn-red" href="{=site.url('sizing-guide')}" target="_blank" rel="noopener" data-sizing-popup>Open the sizing guide</a></p>
 
-The right size depends on the cut of the garment, so use the table for the item you are ordering. If you fall between two sizes, take the next size up for a more comfortable fit.
-
-### Sublimated netball dress, kids
-
-| Size | Half chest | Length |
-| --- | --- | --- |
-| 4 | 30 | 66 |
-| 6 | 31 | 67 |
-| 8 | 32 | 69 |
-| 10 | 33 | 71 |
-| 12 | 34 | 72 |
-| 14 | 35 | 73 |
-
-### Sublimated netball dress, adults
-
-| Size | Half chest | Length |
-| --- | --- | --- |
-| XXS | 36.5 | 77 |
-| XS | 38 | 78 |
-| S | 39.5 | 79 |
-| M | 41 | 80 |
-| L | 42.5 | 81 |
-| XL | 44 | 82 |
-| 2XL | 45.5 | 83 |
-| 3XL | 47 | 84 |
-
-### Hoodies, adults
-
-| Size | Half chest | Length |
-| --- | --- | --- |
-| XS | 53.5 | 73 |
-| S | 56 | 75 |
-| M | 58.5 | 77 |
-| L | 61 | 79 |
-| XL | 63.5 | 81 |
-| XXL | 66 | 83 |
-| 3XL | 69 | 85 |
-| 5XL | 75 | 89 |
-
-### Hoodies, kids
-
-| Size | Half chest | Length |
-| --- | --- | --- |
-| 4 | 40 | 46 |
-| 6 | 42 | 50 |
-| 8 | 44 | 54 |
-| 10 | 46 | 58 |
-| 12 | 48 | 62 |
-| 14 | 51 | 66 |
-| 16 | 54 | 70 |
+<script>{|
+  (function () {
+    var link = document.querySelector('[data-sizing-popup]');
+    if (!link) { return; }
+    link.addEventListener('click', function (event) {
+      var popup = window.open(link.href, 'sizing-guide', 'width=760,height=840,scrollbars=yes,resizable=yes');
+      if (popup) { event.preventDefault(); popup.focus(); }
+    });
+  })();
+|}</script>
 
 ## Ordering
 
