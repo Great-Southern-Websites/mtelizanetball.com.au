@@ -1232,7 +1232,7 @@ h2.title::after {
   margin: 1.5rem 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.25rem;
 }
 
@@ -1246,24 +1246,14 @@ h2.title::after {
   border-top: 4px solid var(--red);
 }
 
+/* Photos come in portrait and landscape, so crop them to one shape */
 .uniform-gallery img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
-}
-
-/* Placeholder panel, standing in until a photo of the item is supplied */
-.uniform-shot {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   aspect-ratio: 3 / 4;
-  padding: 1rem;
-  border: 2px dashed var(--line);
+  object-fit: cover;
+  object-position: center top;
   border-radius: 6px;
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 .prose .uniform-gallery h3 { margin: 0.85rem 0 0; font-size: 1.2rem; }

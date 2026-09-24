@@ -16,22 +16,27 @@ eyebrow: "Player Info"
 ## Optional club gear
 
 - Hooded windcheaters, with optional name embroidery.
+- Training tops.
 - Club socks.
 
 ## Uniform photos
 
 <ul class="uniform-gallery">
   <li>
-    <div class="uniform-shot">[Add a photo of the adult MENC dress here]</div>
+    <img src="{=site.url('images/uploads/adult-uniform.png')}" alt="Adult MENC A-line dress in red, with black and gold trim and a band of stars around the hem" loading="lazy" width="704" height="944">
     <h3>Adult MENC dress</h3>
   </li>
   <li>
-    <div class="uniform-shot">[Add a photo of the kids MENC dress here]</div>
+    <img src="{=site.url('images/uploads/kids-uniform.png')}" alt="Junior MENC A-line dress in red, with black and gold trim and a band of stars around the hem" loading="lazy" width="704" height="944">
     <h3>Kids MENC dress</h3>
   </li>
   <li>
-    <div class="uniform-shot">[Add a photo of the hoodie here]</div>
+    <img src="{=site.url('images/uploads/hoodie.png')}" alt="Black club hoodie with red side panels and the Mt Eliza Netball logo on the chest" loading="lazy" width="704" height="944">
     <h3>Hoodie</h3>
+  </li>
+  <li>
+    <img src="{=site.url('images/uploads/training-top.png')}" alt="Black club training top with red side panels and the Mt Eliza Netball logo on the chest" loading="lazy" width="944" height="704">
+    <h3>Training top</h3>
   </li>
 </ul>
 
@@ -39,11 +44,12 @@ eyebrow: "Player Info"
 
 | Item | Price |
 | --- | --- |
-| Dress, junior | $46 inc GST |
-| Dress, adult | $47 inc GST |
-| Dress, adult long length | $49 inc GST |
-| Hoodie | $61 inc GST |
-| Socks | $12 inc GST (minimum 60 units) |
+| Aline Dress (Size 6-14) / (Sizes XXS-3XL) | $55 |
+| Hoodie (inc. name on back / (Sizes 4-16) / (Sizes XS-3XL) | $65 |
+| Socks (13-3, 2-8 or 8-11) | $15 |
+| Training Top | $25 |
+| Hat | $15 |
+| Beanie | $15 |
 
 ## Sizing guide
 
