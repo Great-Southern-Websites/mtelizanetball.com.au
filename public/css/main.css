@@ -1228,7 +1228,8 @@ h2.title::after {
 
 /* --------------------------------------------------------------------------
    Uniform page. Kit rules use the gold star off the dress hem as the bullet,
-   and each garment sits in a card with its photo beside the sizes on offer.
+   and each garment sits in a card with its photo beside the sizes on offer and
+   its size chart printed underneath.
    -------------------------------------------------------------------------- */
 .prose .kit-rules {
   list-style: none;
@@ -1329,28 +1330,104 @@ h2.title::after {
   line-height: 1.3;
 }
 
-/* Gear with no sizes to list gets a tile instead of a row, so the card is
-   not left with an empty column beside the name. */
-.kit-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Gear with nothing to chart gets a wider photo, so the card is not left
+   with an empty column beside the name. */
+.kit-plain { grid-template-columns: minmax(0, 16rem) minmax(0, 1fr); max-width: 34rem; }
 
-.kit-tiles .kit {
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: start;
+/* The size chart sits under the photo of the garment it belongs to, spanning
+   the whole card, so nobody has to go looking for it. */
+.kit-sizes {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 0.25rem;
 }
 
-/* These two photos come in portrait and landscape, so crop them to one shape */
-.kit-tiles figure img {
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
+.kit-sizes-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.prose .size-table {
+  width: 100%;
+  margin: 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: none;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose .size-table th {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+}
+
+.prose .size-table tbody th {
+  background: none;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  text-transform: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose .size-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose .size-table tr:last-child th,
+.prose .size-table tr:last-child td { border-bottom: none; }
+
+/* How to measure: the four steps, read once, then used on every chart below */
+.measure-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.prose .measure-card h3 { margin: 0 0 0.5rem; }
+.prose .measure-card p { margin: 0 0 0.75rem; }
+
+.prose .measure-steps {
+  margin: 0;
+  padding-left: 1.6rem;
+}
+
+.prose .measure-steps li { margin: 0.45rem 0; }
+
+.prose .measure-steps li::marker {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--red-ink);
+}
+
+.prose .measure-card .measure-note {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 40rem) {
+  .kit-sizes-two { grid-template-columns: 1fr; gap: 0.25rem; }
 }
 
 @media (max-width: 34rem) {
-  .kit { grid-template-columns: 1fr; gap: 1rem; }
+  .kit, .kit-plain { grid-template-columns: 1fr; gap: 1rem; }
   .kit figure { max-width: 16rem; }
-  .kit-tiles { grid-template-columns: 1fr; }
-  .kit-tiles figure { max-width: none; }
+  .prose .size-table { font-size: 0.9rem; }
+  .prose .size-table th, .prose .size-table td { padding: 0.5rem 0.55rem; }
 }
 
 /* Ordering block: the coordinator's address as the loudest thing in it */
