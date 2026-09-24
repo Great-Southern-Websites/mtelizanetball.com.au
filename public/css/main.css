@@ -1226,37 +1226,154 @@ h2.title::after {
 
 .policy-group ul { margin: 0; padding: 0 1.25rem 1.1rem 2.5rem; }
 
-/* Uniform page: one card per item of club gear */
-.uniform-gallery {
+/* --------------------------------------------------------------------------
+   Uniform page. Kit rules use the gold star off the dress hem as the bullet,
+   and each garment sits in a card with its photo beside the sizes on offer.
+   -------------------------------------------------------------------------- */
+.prose .kit-rules {
   list-style: none;
-  margin: 1.5rem 0;
+  margin: 1.25rem 0 2rem;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.15rem;
+}
+
+.prose .kit-rules li {
+  position: relative;
+  margin: 0;
+  padding: 0.6rem 0 0.6rem 2.25rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.prose .kit-rules li:last-child { border-bottom: none; }
+
+.prose .kit-rules li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23ECB84A' d='M10 1l2.6 5.6L18.6 7.4l-4.5 4.1L15.3 18 10 14.9 4.7 18l1.2-6.5L1.4 7.4l6-0.8z'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+.kit-list {
+  list-style: none;
+  margin: 1.5rem 0 2.5rem;
+  padding: 0;
+  display: grid;
   gap: 1.25rem;
 }
 
-.prose .uniform-gallery li { margin: 0; }
+.prose .kit-list li { margin: 0; }
 
-.uniform-gallery li {
+.kit {
+  display: grid;
+  grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
   background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--red);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow);
-  border-top: 4px solid var(--red);
 }
 
-/* Photos come in portrait and landscape, so crop them to one shape */
-.uniform-gallery img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
+.kit figure {
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+/* Shown whole, not cropped, so the cut of the garment is legible */
+.kit figure img { width: 100%; height: auto; }
+
+.prose .kit-body h3 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.kit-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 1rem 0 0.6rem;
+}
+
+.prose .size-set {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.prose .size-set li {
+  margin: 0;
+  min-width: 2.6rem;
+  padding: 0.5rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--bg);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Gear with no sizes to list gets a tile instead of a row, so the card is
+   not left with an empty column beside the name. */
+.kit-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.kit-tiles .kit {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* These two photos come in portrait and landscape, so crop them to one shape */
+.kit-tiles figure img {
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
-  border-radius: 6px;
 }
 
-.prose .uniform-gallery h3 { margin: 0.85rem 0 0; font-size: 1.2rem; }
+@media (max-width: 34rem) {
+  .kit { grid-template-columns: 1fr; gap: 1rem; }
+  .kit figure { max-width: 16rem; }
+  .kit-tiles { grid-template-columns: 1fr; }
+  .kit-tiles figure { max-width: none; }
+}
+
+/* Ordering block: the coordinator's address as the loudest thing in it */
+.order-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.order-card p { margin: 0; }
+
+.prose .order-card .order-email {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  word-break: break-word;
+}
 
 .site-footer {
   background: var(--black);

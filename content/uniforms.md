@@ -7,36 +7,77 @@ eyebrow: "Player Info"
 
 ## Compulsory uniform
 
-- A **MENC A-line netball dress**, or a **MENC singlet and black shorts**.
-- In line with FDNA Uniform Policy and Procedures, the entire team must be identical unless they are a gender-mixed team.
-- **Sports briefs** in black or matching our dress.
-- **Bike shorts** must not be visible beneath the dress or shorts.
-- Players may choose to wear full-length leggings or tracksuit pants beneath their dress or shorts, in black or a colour matching the uniform.
+<ul class="kit-rules">
+  <li>A <strong>MENC A-line netball dress</strong>.</li>
+  <li>In line with FDNA Uniform Policy and Procedures, the entire team must be identical unless they are a gender-mixed team.</li>
+  <li><strong>Sports briefs</strong> in black or matching our dress.</li>
+  <li><strong>Bike shorts</strong> must not be visible beneath the dress or shorts.</li>
+  <li>Players may choose to wear full-length leggings or tracksuit pants beneath their dress or shorts, in black or a colour matching the uniform.</li>
+</ul>
+
+<ul class="kit-list">
+  <li class="kit">
+    <figure>
+      <img src="{=site.url('images/uploads/adult-uniform.png')}" alt="Adult MENC A-line dress in red, with black and gold trim and a band of stars around the hem" loading="lazy" width="704" height="944">
+    </figure>
+    <div class="kit-body">
+      <h3>Adult MENC dress</h3>
+      <p class="kit-label">Sizes</p>
+      <ul class="size-set">
+        <li>XXS</li>
+        <li>XS</li>
+        <li>S</li>
+        <li>M</li>
+        <li>L</li>
+        <li>XL</li>
+        <li>2XL</li>
+        <li>3XL</li>
+      </ul>
+    </div>
+  </li>
+  <li class="kit">
+    <figure>
+      <img src="{=site.url('images/uploads/kids-uniform.png')}" alt="Junior MENC A-line dress in red, with black and gold trim and a band of stars around the hem" loading="lazy" width="704" height="944">
+    </figure>
+    <div class="kit-body">
+      <h3>Kids MENC dress</h3>
+      <p class="kit-label">Sizes</p>
+      <ul class="size-set">
+        <li>4</li>
+        <li>6</li>
+        <li>8</li>
+        <li>10</li>
+        <li>12</li>
+        <li>14</li>
+      </ul>
+    </div>
+  </li>
+</ul>
 
 ## Optional club gear
 
-- Hoodies, with optional name embroidery.
-- Training tops.
-- Club socks.
+<ul class="kit-rules">
+  <li>Hoodies, with optional name embroidery.</li>
+  <li>Training tops.</li>
+  <li>Club socks.</li>
+</ul>
 
-## Uniform photos
-
-<ul class="uniform-gallery">
-  <li>
-    <img src="{=site.url('images/uploads/adult-uniform.png')}" alt="Adult MENC A-line dress in red, with black and gold trim and a band of stars around the hem" loading="lazy" width="704" height="944">
-    <h3>Adult MENC dress</h3>
+<ul class="kit-list kit-tiles">
+  <li class="kit">
+    <figure>
+      <img src="{=site.url('images/uploads/hoodie.png')}" alt="Black club hoodie with red side panels and the Mt Eliza Netball logo on the chest" loading="lazy" width="704" height="944">
+    </figure>
+    <div class="kit-body">
+      <h3>Hoodie</h3>
+    </div>
   </li>
-  <li>
-    <img src="{=site.url('images/uploads/kids-uniform.png')}" alt="Junior MENC A-line dress in red, with black and gold trim and a band of stars around the hem" loading="lazy" width="704" height="944">
-    <h3>Kids MENC dress</h3>
-  </li>
-  <li>
-    <img src="{=site.url('images/uploads/hoodie.png')}" alt="Black club hoodie with red side panels and the Mt Eliza Netball logo on the chest" loading="lazy" width="704" height="944">
-    <h3>Hoodie</h3>
-  </li>
-  <li>
-    <img src="{=site.url('images/uploads/training-top.png')}" alt="Black club training top with red side panels and the Mt Eliza Netball logo on the chest" loading="lazy" width="944" height="704">
-    <h3>Training top</h3>
+  <li class="kit">
+    <figure>
+      <img src="{=site.url('images/uploads/training-top.png')}" alt="Black club training top with red side panels and the Mt Eliza Netball logo on the chest" loading="lazy" width="944" height="704">
+    </figure>
+    <div class="kit-body">
+      <h3>Training top</h3>
+    </div>
   </li>
 </ul>
 
@@ -59,6 +100,7 @@ Measure a garment that already fits you, then check it against the club size cha
 
 ## Ordering
 
-For sizing, orders and anything uniform-related, email the Uniform Coordinator:
-
-[uniforms.menc@gmail.com](mailto:uniforms.menc@gmail.com)
+<div class="order-card">
+  <p>For sizing, orders and anything uniform-related, email the Uniform Coordinator:</p>
+  <p class="order-email"><a href="mailto:uniforms.menc@gmail.com">uniforms.menc@gmail.com</a></p>
+</div>
