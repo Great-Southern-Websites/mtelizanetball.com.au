@@ -32,6 +32,12 @@ eyebrow: "Proudly supported by"
     <p>Robinson Voss Partners is a Mount Eliza advisory firm offering business advice, tax strategy, asset protection and super solutions to business owners.</p>
     <p><a href="https://rvpartners.com.au/">Visit Robinson Voss Partners</a></p>
   </li>
+  <li>
+    <img src="{=site.url('images/uploads/images-6.png')}" alt="The Ultimate Touch" loading="lazy" width="738" height="210">
+    <h3>The Ultimate Touch</h3>
+    <p>The Ultimate Touch is Sean, a painter and decorator based on the Mornington Peninsula with over thirty years of experience. He paints and decorates homes, hangs specialist materials such as wide vinyls, and is happy to talk through colour schemes or arrange an appointment with a colour consultant.</p>
+    <p><a href="https://theultimatetouch.com.au/">Visit The Ultimate Touch</a></p>
+  </li>
 </ul>
 
 ## Become a sponsor
